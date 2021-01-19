@@ -1,0 +1,394 @@
+-- I) Base case
+
+open INV .
+  red inv200(init,p,q,r) .
+close
+
+-- II) Inductive ceses
+
+--> 1) sdm1(s,p10,q10,r10)
+-- 1.1) c-sdm1(s,p10,q10,r10)
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op r10 : -> Random .
+-- assumptions
+  -- eq c-sdm1(s,p10,q10,r10) = true .
+  eq r10 \in ur(s) = false .
+--
+  eq r = r10 .
+-- successor state
+  eq s' = sdm1(s,p10,q10,r10) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+--
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op r10 : -> Random .
+-- assumptions
+  -- eq c-sdm1(s,p10,q10,r10) = true .
+  eq r10 \in ur(s) = false .
+--
+  eq (r = r10) = false .
+-- successor state
+  eq s' = sdm1(s,p10,q10,r10) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+--
+-- 1.2) not c-sdm1(s,p10,q10,r10)
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op r10 : -> Random .
+-- assumptions
+  eq c-sdm1(s,p10,q10,r10) = false .
+-- successor state
+  eq s' = sdm1(s,p10,q10,r10) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+
+--> 2) sdm2(s,p10,r10,m10)
+-- 2.1) c-sdm2(s,p10,r10,m10)
+open ISTEP .
+-- arbitrary objects
+  op p10 : -> Principal .
+  op r10 : -> Random .
+  op m10 : -> Message .
+  op nw10 : -> Network .
+-- assumptions
+  -- eq c-sdm2(s,p10,r10,m10) = true .
+  eq nw(s) = m10 , nw10 .
+  eq m1?(m10) = true .
+  eq receiver(m10) = p10 .
+  eq key(cipher1(m10)) = p10 .
+  eq principal(cipher1(m10)) = sender(m10) .
+  eq r10 \in ur(s) = false .
+--
+  eq r = r10 .
+-- successor state
+  eq s' = sdm2(s,p10,r10,m10) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+--
+open ISTEP .
+-- arbitrary objects
+  op p10 : -> Principal .
+  op r10 : -> Random .
+  op m10 : -> Message .
+  op nw10 : -> Network .
+-- assumptions
+  -- eq c-sdm2(s,p10,r10,m10) = true .
+  eq nw(s) = m10 , nw10 .
+  eq m1?(m10) = true .
+  eq receiver(m10) = p10 .
+  eq key(cipher1(m10)) = p10 .
+  eq principal(cipher1(m10)) = sender(m10) .
+  eq r10 \in ur(s) = false .
+--
+  eq (r = r10) = false .
+-- successor state
+  eq s' = sdm2(s,p10,r10,m10) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+--
+-- 2.2) not c-sdm2(s,p10,r10,m10)
+open ISTEP .
+-- arbitrary objects
+  op p10 : -> Principal .
+  op r10 : -> Random .
+  op m10 : -> Message .
+-- assumptions
+  eq c-sdm2(s,p10,r10,m10) = false .
+-- successor state
+  eq s' = sdm2(s,p10,r10,m10) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+
+--> 3) sdm3(s,p10,r10,m10,m20)
+-- 3.1) c-sdm3(s,p10,r10,m10,m20)
+open ISTEP .
+-- arbitrary objects
+  op p10 : -> Principal .
+  op r10 : -> Random .
+  ops m10 m20 : -> Message .
+  op nw10 : -> Network .
+-- assumptions
+  -- eq c-sdm3(s,p10,r10,m10,m20) = true .
+  eq nw(s) = m10 , m20 , nw10 .
+  eq m1?(m10) = true .
+  eq m2?(m20) = true .
+  eq creator(m10) = p10 .
+  eq sender(m10) = p10 .
+  eq receiver(m10) = sender(m20) .
+  eq key(cipher1(m10)) = sender(m20) .
+  eq nonce(cipher1(m10)) = n(p10,sender(m20),r10) .
+  eq principal(cipher1(m10)) = p10 .
+  eq receiver(m20) = p10 .
+  eq key(cipher2(m20)) = p10 .
+  eq nonce1(cipher2(m20)) = n(p10,sender(m20),r10) .
+-- successor state
+  eq s' = sdm3(s,p10,r10,m10,m20) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+--
+-- 3.2) not c-sdm3(s,p10,r10,m10,m20)
+open ISTEP .
+-- arbitrary objects
+  op p10 : -> Principal .
+  op r10 : -> Random .
+  ops m10 m20 : -> Message .
+-- assumptions
+  eq c-sdm3(s,p10,r10,m10,m20) = false .
+-- successor state
+  eq s' = sdm3(s,p10,r10,m10,m20) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+
+--> 4) fkm11(s,p10,q10,e10)
+-- 4.1) c-fkm11(s,p10,q10,e10)
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op e10 : -> Cipher1 .
+-- assumptions
+  -- eq c-fkm11(s,p10,q10,e10) = true .
+  eq e10 \in cenc1(nw(s)) = true .
+--
+  eq (enc1(q,n(p,q,r),p) = e10) = false .
+-- successor state
+  eq s' = fkm11(s,p10,q10,e10) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+--
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op e10 : -> Cipher1 .
+-- assumptions
+  -- eq c-fkm11(s,p10,q10,e10) = true .
+  eq e10 \in cenc1(nw(s)) = true .
+--
+  eq enc1(q,n(p,q,r),p) = e10 .
+-- successor state
+  eq s' = fkm11(s,p10,q10,e10) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+--
+-- 4.2) not c-fkm11(s,p10,q10,e10)
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op e10 : -> Cipher1 .
+-- assumptions
+  eq c-fkm11(s,p10,q10,e10) = false .
+-- successor state
+  eq s' = fkm11(s,p10,q10,e10) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+
+--> 5) fkm12(s,p10,q10,n10)
+-- 5.1) c-fkm12(s,p10,q10,n10)
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op n10 : -> Nonce .
+-- assumptions
+  -- eq c-fkm12(s,p10,q10,n10) = true .
+  eq n10 \in cnonce(nw(s)) = true .
+--
+  eq q10 = intruder .
+-- successor state
+  eq s' = fkm12(s,p10,q10,n10) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+--
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op n10 : -> Nonce .
+-- assumptions
+  -- eq c-fkm12(s,p10,q10,n10) = true .
+  eq n10 \in cnonce(nw(s)) = true .
+--
+  eq (q10 = intruder) = false .
+  eq r \in ur(s) = true .
+-- successor state
+  eq s' = fkm12(s,p10,q10,n10) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+--
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op n10 : -> Nonce .
+-- assumptions
+  -- eq c-fkm12(s,p10,q10,n10) = true .
+  eq n10 \in cnonce(nw(s)) = true .
+--
+  eq (q10 = intruder) = false .
+  eq r \in ur(s) = false .
+  eq (n(p,q,r) = n10) = false .
+-- successor state
+  eq s' = fkm12(s,p10,q10,n10) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+--
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op n10 : -> Nonce .
+-- assumptions
+  -- eq c-fkm12(s,p10,q10,n10) = true .
+  eq n10 \in cnonce(nw(s)) = true .
+--
+  eq (q10 = intruder) = false .
+  eq r \in ur(s) = false .
+  eq n(p,q,r) = n10 .
+-- successor state
+  eq s' = fkm12(s,p10,q10,n10) .
+-- check if the predicate is true.
+  red inv210(s,p,q,r) implies istep200(p,q,r) .
+close
+--
+-- 5.2) not c-fkm12(s,p10,q10,n10)
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op n10 : -> Nonce .
+-- assumptions
+  eq c-fkm12(s,p10,q10,n10) = false .
+-- successor state
+  eq s' = fkm12(s,p10,q10,n10) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+
+--> 6) fkm21(s,p10,q10,e20)
+-- 6.1) c-fkm21(s,p10,q10,e20)
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op e20 : -> Cipher2 .
+-- assumptions
+  -- eq c-fkm21(s,p10,q10,e20) = true .
+  eq e20 \in cenc2(nw(s)) = true .
+-- successor state
+  eq s' = fkm21(s,p10,q10,e20) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+--
+-- 6.2) not c-fkm21(s,p10,q10,e20)
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op e20 : -> Cipher2 .
+-- assumptions
+  eq c-fkm21(s,p10,q10,e20) = false .
+-- successor state
+  eq s' = fkm21(s,p10,q10,e20) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+
+--> 7) fkm22(s,p10,q10,n10,n20)
+-- 7.1) c-fkm22(s,p10,q10,n10,n20)
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  ops n10 n20 : -> Nonce .
+-- assumptions
+  -- eq c-fkm22(s,p10,q10,n10,n20) = true .
+  eq n10 \in cnonce(nw(s)) = true .
+  eq n20 \in cnonce(nw(s)) = true .
+-- successor state
+  eq s' = fkm22(s,p10,q10,n10,n20) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+--
+-- 7.2) not c-fkm22(s,p10,q10,n10,n20)
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  ops n10 n20 : -> Nonce .
+-- assumptions
+  eq c-fkm22(s,p10,q10,n10,n20) = false .
+-- successor state
+  eq s' = fkm22(s,p10,q10,n10,n20) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+
+--> 8) fkm31(s,p10,q10,e30)
+-- 8.1) c-fkm31(s,p10,q10,e30)
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op e30 : -> Cipher3 .
+-- assumptions
+  -- eq c-fkm31(s,p10,q10,e30) = true .
+  eq e30 \in cenc3(nw(s)) = true .
+-- successor state
+  eq s' = fkm31(s,p10,q10,e30) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+--
+-- 8.2) not c-fkm31(s,p10,q10,e30)
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op e30 : -> Cipher3 .
+-- assumptions
+  eq c-fkm31(s,p10,q10,e30) = false .
+-- successor state
+  eq s' = fkm31(s,p10,q10,e30) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+
+--> 9) fkm32(s,p10,q10,n10)
+-- 9.1) c-fkm32(s,p10,q10,n10)
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op n10 : -> Nonce .
+-- assumptions
+  -- eq c-fkm32(s,p10,q10,n10) = true .
+  eq n10 \in cnonce(nw(s)) = true .
+-- successor state
+  eq s' = fkm32(s,p10,q10,n10) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+--
+-- 9.2) not c-fkm32(s,p10,q10,n10)
+open ISTEP .
+-- arbitrary objects
+  ops p10 q10 : -> Principal .
+  op n10 : -> Nonce .
+-- assumptions
+  eq c-fkm32(s,p10,q10,n10) = false .
+-- successor state
+  eq s' = fkm32(s,p10,q10,n10) .
+-- check if the predicate is true.
+  red istep200(p,q,r) .
+close
+
+--> Q.E.D.

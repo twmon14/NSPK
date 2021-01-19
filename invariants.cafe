@@ -1,0 +1,306 @@
+
+-- Begin Secrecy Theorem
+
+--
+-- Claim 100 (**PROVED**) (Used Lemmas: Nonce)
+--
+--  invariant (e1 \in cenc1(nw(s)) implies not(key(e1) = intruder))
+--
+
+--
+-- Claim 110 (**PROVED**) (Used Lemmas: Nonce)
+--
+--  invariant (e2 \in cenc2(nw(s)) implies not(key(e2) = intruder))
+--
+
+--
+-- Claim 120 (**PROVED**) (Used Lemmas: Nonce)
+--
+--  invariant (e3 \in cenc3(nw(s)) implies not(key(e3) = intruder))
+--
+
+-- *** Secrecy Theorem
+-- Claim 130 (**PROVED**) (Used Lemmas: 100,110,120,140)
+--
+--  invariant (n \in cnonce(nw(s)) 
+--             implies (creator(n) = intruder or forwhom(n) = intruder))
+--
+
+--
+-- Claim 140 (**PROVED**) (Used Lemmas: 100,110,120,160)
+--
+--  invariant (e1 \in cenc1(nw(s)) and principal(e1) = intruder
+--             implies 
+--             nonce(e1) \in cnonce(nw(s)))
+--
+
+-- Claim 150 (**PROVED**) (Used Lemmas: 100,110,120,160)
+--
+--  invariant (e2 \in cenc2(nw(s)) and creator(nonce2(e2)) = intruder
+--             implies 
+--             nonce2(e2) \in cnonce(nw(s)))
+--
+                        -- OR --
+--  invariant (e2 \in cenc2(nw(s)) and nonce2(e2) \in cnonce(nw(s))
+--             implies 
+--             creator(nonce2(e2)) = intruder)  
+
+
+--
+-- Claim 160 (**PROVED**) (Used Lemmas: None)
+--
+--  invariant (creator(n) = intruder implies n \in cnonce(nw(s)))
+--
+
+-- End Secrecy Theorem
+
+
+-- Begin One-to-many Agreement
+
+-- *** One-to-many Agreement 1
+-- Claim 170 (**PROVED**) (Used Lemmas: 130,190,220)
+--
+--  invariant (not(p = intruder) and
+--             m1(p,p,q,enc1(q,n(p,q,r),p)) \in nw(s) and
+--             m2(q1,q,p,enc2(p,n(p,q,r),n)) \in nw(s)
+--             implies
+--             m2(q,q,p,enc2(p,n(p,q,r),n)) \in nw(s))
+--
+
+-- *** One-to-many Agreement 2
+-- Claim 180 (**PROVED**) (Used Lemmas: 130,230,240)
+--
+--  invariant (not(q = intruder) and
+--             m2(q,q,p,enc2(p,n,n(q,p,r))) \in nw(s) and
+--             m3(p1,p,q,enc3(q,n(q,p,r))) \in nw(s)
+--             implies
+--             m3(p,p,q,enc3(q,n(q,p,r))) \in nw(s))
+--
+
+--
+-- Claim 190 (**PROVED**) (Used Lemmas: 200,210)
+--
+--  invariant (not(p = intruder) and enc2(p,n(p,q,r),n) \in cenc2(nw(s))
+--             implies 
+--             r \in ur(s)) 
+--
+
+--
+-- Claim 200 (**PROVED**) (Used Lemmas: 210)
+--
+--  invariant (not(p = intruder) and not(q = intruder) and 
+--             enc1(q,n(p,q,r),p) \in cenc1(nw(s))
+--             implies 
+--             r \in ur(s)) 
+--
+
+--
+-- Claim 210 (**PROVED**) (Used Lemmas: 100,110,120,140,150)
+--
+--  invariant (not(p = intruder) and n(p,q,r) \in cnonce(nw(s))
+--             implies 
+--             r \in ur(s)) 
+--
+
+--
+-- Claim 220 (**PROVED**) (Used Lemmas: 130,190)
+--
+--  invariant (not(p = intruder) and
+--             m1(p,p,q,enc1(q,n(p,q,r),p)) \in nw(s) and
+--             enc2(p,n(p,q,r),n) \in cenc2(nw(s))
+--             implies
+--             m2(q,q,p,enc2(p,n(p,q,r),n)) \in nw(s))
+--
+
+--
+-- Claim 230 (**PROVED**) (Used Lemmas: 130,170,260)
+--
+--  invariant (not(q = intruder) and not(p = intruder) and
+--             enc3(q,n(q,p,r)) \in cenc3(nw(s))
+--             implies
+--             m3(p,p,q,enc3(q,n(q,p,r))) \in nw(s))
+--
+
+--
+-- Claim 240 (**PROVED**) (Used Lemmas: 210,250)
+--
+--  invariant (not(q = intruder) and enc3(q,n(q,p,r)) \in cenc3(nw(s))
+--             implies 
+--             r \in ur(s)) 
+--
+
+--
+-- Claim 250 (**PROVED**) (Used Lemmas: 210)
+--
+--  invariant (not(q = intruder) and not(p1 = intruder) and
+--             enc2(p1,n,n(q,p,r)) \in cenc2(nw(s))
+--             implies 
+--             r \in ur(s)) 
+--
+
+--
+-- Claim 260 (**PROVED**) (Used Lemmas: Nonce)
+--
+--  invariant (not(p = intruder) and
+--             m2(p,p,q,enc2(q,n1,n2)) \in nw(s)
+--             implies
+--             forwhom(n2) = q) 
+--
+
+-- Begin One-to-many Agreement
+
+mod INV {
+  pr(NSPK)
+-- arbitrary objects
+  op e1 : -> Cipher1 
+  op e2 : -> Cipher2 
+  op e3 : -> Cipher3 
+  op r : -> Random
+  ops n n1 n2 : -> Nonce
+  ops p q p1 q1 : -> Principal
+-- declare invariants to prove
+  op inv100 : System Cipher1 -> Bool
+  op inv110 : System Cipher2 -> Bool
+  op inv120 : System Cipher3 -> Bool
+  op inv130 : System Nonce -> Bool
+  op inv140 : System Cipher1 -> Bool
+  op inv150 : System Cipher2 -> Bool
+  op inv160 : System Nonce -> Bool
+  op inv170 : System Principal Principal Principal Random Nonce -> Bool
+  op inv180 : System Principal Principal Principal Random Nonce -> Bool
+  op inv190 : System Principal Principal Random Nonce -> Bool
+  op inv200 : System Principal Principal Random -> Bool
+  op inv210 : System Principal Principal Random -> Bool
+  op inv220 : System Principal Principal Random Nonce -> Bool
+  op inv230 : System Principal Principal Random -> Bool
+  op inv240 : System Principal Principal Random -> Bool
+  op inv250 : System Principal Principal Principal Random Nonce -> Bool
+  op inv260 : System Principal Principal Nonce Nonce -> Bool
+-- CafeOBJ variables
+  var S : System
+  var E1 : Cipher1
+  var E2 : Cipher2
+  var E3 : Cipher3
+  var R : Random
+  vars N N1 N2 : Nonce
+  vars P Q P1 Q1 : Principal
+-- define invariants to prove
+  eq inv100(S,E1) = (E1 \in cenc1(nw(S)) implies not(key(E1) = intruder)) .
+  eq inv110(S,E2) = (E2 \in cenc2(nw(S)) implies not(key(E2) = intruder)) .
+  eq inv120(S,E3) = (E3 \in cenc3(nw(S)) implies not(key(E3) = intruder)) .
+  eq inv130(S,N) 
+     = (N \in cnonce(nw(S)) implies (creator(N) = intruder or forwhom(N) = intruder)) .
+  eq inv140(S,E1)
+     = (E1 \in cenc1(nw(S)) and principal(E1) = intruder
+        implies
+        nonce(E1) \in cnonce(nw(S))) .
+  eq inv150(S,E2)
+     = (E2 \in cenc2(nw(S)) and creator(nonce2(E2)) = intruder
+        implies
+        nonce2(E2) \in cnonce(nw(S))) .
+-- eq inv150(S,E2)
+--    = (E2 \in cenc2(nw(S)) and nonce2(E2) \in cnonce(nw(S))
+--      implies
+--      creator(nonce2(E2)) = intruder) .
+  eq inv160(S,N) = (creator(N) = intruder implies N \in cnonce(nw(S))) .
+  eq inv170(S,P,Q,Q1,R,N)
+     = (not(P = intruder) and
+        m1(P,P,Q,enc1(Q,n(P,Q,R),P)) \in nw(S) and
+        m2(Q1,Q,P,enc2(P,n(P,Q,R),N)) \in nw(S)
+        implies
+        m2(Q,Q,P,enc2(P,n(P,Q,R),N)) \in nw(S)) .
+  eq inv180(S,P,Q,P1,R,N)
+     = (not(Q = intruder) and
+        m2(Q,Q,P,enc2(P,N,n(Q,P,R))) \in nw(S) and
+        m3(P1,P,Q,enc3(Q,n(Q,P,R))) \in nw(S)
+        implies
+        m3(P,P,Q,enc3(Q,n(Q,P,R))) \in nw(S)) .
+  eq inv190(S,P,Q,R,N)
+     = (not(P = intruder) and enc2(P,n(P,Q,R),N) \in cenc2(nw(S))
+        implies 
+        R \in ur(S)) .
+  eq inv200(S,P,Q,R)
+     = (not(P = intruder) and not(Q = intruder) and 
+        enc1(Q,n(P,Q,R),P) \in cenc1(nw(S))
+        implies 
+        R \in ur(S)) .
+  eq inv210(S,P,Q,R)
+     = (not(P = intruder) and n(P,Q,R) \in cnonce(nw(S))
+        implies 
+        R \in ur(S)) .
+  eq inv220(S,P,Q,R,N)
+     = (not(P = intruder) and
+        m1(P,P,Q,enc1(Q,n(P,Q,R),P)) \in nw(S) and
+        enc2(P,n(P,Q,R),N) \in cenc2(nw(S))
+        implies
+        m2(Q,Q,P,enc2(P,n(P,Q,R),N)) \in nw(S)) .
+  eq inv230(S,P,Q,R)
+     = (not(Q = intruder) and not(P = intruder) and
+        enc3(Q,n(Q,P,R)) \in cenc3(nw(S))
+        implies
+        m3(P,P,Q,enc3(Q,n(Q,P,R))) \in nw(S)) .
+  eq inv240(S,P,Q,R)
+     = (not(Q = intruder) and enc3(Q,n(Q,P,R)) \in cenc3(nw(S))
+        implies 
+        R \in ur(S)) .
+  eq inv250(S,P1,P,Q,R,N)
+     = (not(Q = intruder) and not(P1 = intruder) and
+        enc2(P1,N,n(Q,P,R)) \in cenc2(nw(S))
+        implies 
+        R \in ur(S)) .
+  eq inv260(S,P,Q,N1,N2) 
+     = (not(P = intruder) and
+        m2(P,P,Q,enc2(Q,N1,N2)) \in nw(S)
+        implies
+        forwhom(N2) = Q) .
+}
+
+mod ISTEP {
+  pr(INV)
+-- arbitrary objects
+  ops s s' : -> System
+  
+-- declare predicates to prove in inductive step
+  op istep100 : Cipher1 -> Bool
+  op istep110 : Cipher2 -> Bool
+  op istep120 : Cipher3 -> Bool
+  op istep130 : Nonce -> Bool
+  op istep140 : Cipher1 -> Bool
+  op istep150 : Cipher2 -> Bool
+  op istep160 : Nonce -> Bool
+  op istep170 : Principal Principal Principal Random Nonce -> Bool
+  op istep180 : Principal Principal Principal Random Nonce -> Bool
+  op istep190 : Principal Principal Random Nonce -> Bool
+  op istep200 : Principal Principal Random -> Bool
+  op istep210 : Principal Principal Random -> Bool
+  op istep220 : Principal Principal Random Nonce -> Bool
+  op istep230 : Principal Principal Random -> Bool
+  op istep240 : Principal Principal Random -> Bool
+  op istep250 : Principal Principal Principal Random Nonce -> Bool
+  op istep260 : Principal Principal Nonce Nonce -> Bool
+-- CafeOBJ variables
+  var E1 : Cipher1
+  var E2 : Cipher2
+  var E3 : Cipher3
+  var R : Random
+  vars N N1 N2 : Nonce
+  vars P Q P1 Q1 : Principal
+-- define predicates to prove in inductive step
+  eq istep100(E1) = inv100(s,E1) implies inv100(s',E1) .
+  eq istep110(E2) = inv110(s,E2) implies inv110(s',E2) .
+  eq istep120(E3) = inv120(s,E3) implies inv120(s',E3) .
+  eq istep130(N) = inv130(s,N) implies inv130(s',N) .
+  eq istep140(E1) = inv140(s,E1) implies inv140(s',E1) .
+  eq istep150(E2) = inv150(s,E2) implies inv150(s',E2) .
+  eq istep160(N) = inv160(s,N) implies inv160(s',N) .
+  eq istep170(P,Q,Q1,R,N) = inv170(s,P,Q,Q1,R,N) implies inv170(s',P,Q,Q1,R,N) .
+  eq istep180(P,Q,P1,R,N) = inv180(s,P,Q,P1,R,N) implies inv180(s',P,Q,P1,R,N) .
+  eq istep190(P,Q,R,N) = inv190(s,P,Q,R,N) implies inv190(s',P,Q,R,N) .
+  eq istep200(P,Q,R) = inv200(s,P,Q,R) implies inv200(s',P,Q,R) .
+  eq istep210(P,Q,R) = inv210(s,P,Q,R) implies inv210(s',P,Q,R) .
+  eq istep220(P,Q,R,N) = inv220(s,P,Q,R,N) implies inv220(s',P,Q,R,N) .
+  eq istep230(P,Q,R) = inv230(s,P,Q,R) implies inv230(s',P,Q,R) .
+  eq istep240(P,Q,R) = inv240(s,P,Q,R) implies inv240(s',P,Q,R) .
+  eq istep250(P1,P,Q,R,N) = inv250(s,P1,P,Q,R,N) implies inv250(s',P1,P,Q,R,N) .
+  eq istep260(P,Q,N1,N2) = inv260(s,P,Q,N1,N2) implies inv260(s',P,Q,N1,N2) .
+}
