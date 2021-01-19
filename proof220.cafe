@@ -56,7 +56,7 @@ open ISTEP .
   eq q10 = q .
   eq p10 = p .
   --
-  eq enc2(p,n(p,q,r10),n,q) \in cenc2(nw(s)) = false .
+  eq enc2(p,n(p,q,r10),n) \in cenc2(nw(s)) = false .
 -- successor state
   eq s' = sdm1(s,p10,q10,r10) .
 -- check if the predicate is true.
@@ -79,7 +79,7 @@ open ISTEP .
   eq q10 = q .
   eq p10 = p .
   --
-  eq enc2(p,n(p,q,r10),n,q) \in cenc2(nw(s)) = true .
+  eq enc2(p,n(p,q,r10),n) \in cenc2(nw(s)) = true .
 -- successor state
   eq s' = sdm1(s,p10,q10,r10) .
 -- check if the predicate is true.
@@ -116,8 +116,8 @@ open ISTEP .
   eq principal(cipher1(m10)) = sender(m10) .
   eq r10 \in ur(s) = false .
 --
-  eq (enc2(p,n(p,q,r),n,q)
-      = enc2(sender(m10),nonce(cipher1(m10)),n(p10,sender(m10),r10),p10)) = false .
+  eq (enc2(p,n(p,q,r),n)
+      = enc2(sender(m10),nonce(cipher1(m10)),n(p10,sender(m10),r10))) = false .
 -- successor state
   eq s' = sdm2(s,p10,r10,m10) .
 -- check if the predicate is true.
@@ -188,7 +188,6 @@ open ISTEP .
   eq receiver(m20) = p10 .
   eq key(cipher2(m20)) = p10 .
   eq nonce1(cipher2(m20)) = n(p10,sender(m20),r10) .
-  eq principal(cipher2(m20)) = sender(m20) .
 -- successor state
   eq s' = sdm3(s,p10,r10,m10,m20) .
 -- check if the predicate is true.
@@ -309,7 +308,7 @@ open ISTEP .
   -- eq c-fkm21(s,p10,q10,e20) = true .
   eq e20 \in cenc2(nw(s)) = true .
 --
-  eq (enc2(p,n(p,q,r),n,q) = e20) = false .
+  eq (enc2(p,n(p,q,r),n) = e20) = false .
 -- successor state
   eq s' = fkm21(s,p10,q10,e20) .
 -- check if the predicate is true.
@@ -339,12 +338,12 @@ open ISTEP .
   -- eq c-fkm21(s,p10,q10,e20) = true .
   -- eq e20 \in cenc2(nw(s)) = true .
 -- ***REWRITE***
-  eq enc2(p,n(p,q,r),n,q) \in cenc2(nw(s)) = true .
+  eq enc2(p,n(p,q,r),n) \in cenc2(nw(s)) = true .
 --
   eq (p = intruder) = false .
-  eq e20 = enc2(p,n(p,q,r),n,q) .
-  eq m2(intruder,p10,q10,enc2(p,n(p,q,r),n,q))
-     = m2(q,q,p,enc2(p,n(p,q,r),n,q)) .
+  eq e20 = enc2(p,n(p,q,r),n) .
+  eq m2(intruder,p10,q10,enc2(p,n(p,q,r),n))
+     = m2(q,q,p,enc2(p,n(p,q,r),n)) .
 -- successor state
   eq s' = fkm21(s,p10,q10,e20) .
 -- check if the predicate is true.
@@ -362,9 +361,9 @@ open ISTEP .
   eq enc2(p,n(p,q,r),n,q) \in cenc2(nw(s)) = true .
 --
   eq (p = intruder) = false .
-  eq e20 = enc2(p,n(p,q,r),n,q) .
-  eq (m2(intruder,p10,q10,enc2(p,n(p,q,r),n,q))
-      = m2(q,q,p,enc2(p,n(p,q,r),n,q))) = false .
+  eq e20 = enc2(p,n(p,q,r),n) .
+  eq (m2(intruder,p10,q10,enc2(p,n(p,q,r),n))
+      = m2(q,q,p,enc2(p,n(p,q,r),n))) = false .
 -- successor state
   eq s' = fkm21(s,p10,q10,e20) .
 -- check if the predicate is true.
@@ -412,7 +411,7 @@ open ISTEP .
   eq n20 \in cnonce(nw(s)) = true .
 --
   eq (p = intruder) = false .
-  eq (enc2(p,n(p,q,r),n,q) = enc2(q10,n10,n20,p10)) = false .
+  eq (enc2(p,n(p,q,r),n) = enc2(q10,n10,n20)) = false .
 -- successor state
   eq s' = fkm22(s,p10,q10,n10,n20) .
 -- check if the predicate is true.
