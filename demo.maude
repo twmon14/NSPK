@@ -28,4 +28,4 @@ mod DEMO is
     eq downTermSearch((T,TL)) =  downTerm(T, nil) || downTermSearch(TL) .
 endm
 
-reduce in DEMO : downTermSearch(genSeq('NSPK, upTerm(init), 150)) .
+reduce in DEMO : downTermSearch(genSeq('NSPK, upTerm(init), 25)) .
