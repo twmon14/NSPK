@@ -339,7 +339,7 @@ mod NSPK is
       (m1: m1(P,P,Q,enc1(Q,n(P,Q,r1),n(dP,dP,dR),P)))
       (m2: empM2) (m3: empM3)
       (nw: (m1(P,P,Q,enc1(Q,n(P,Q,r1),n(dP,dP,dR),P)) NW))
-      (nonces: (if (Q == intr or gen(n(P,Q,r1)) == intr) then (n(P,Q,r1) Ns) else Ns fi))
+      (nonces: (if (k(enc1(Q,n(P,Q,r1),n(dP,dP,dR),P)) == intr or gen(n(P,Q,r1)) == intr) then (n(P,Q,r1) Ns) else Ns fi))
       (nwM1: (m1(P,P,Q,enc1(Q,n(P,Q,r1),n(dP,dP,dR),P)) NWM1))
       (nwM2: NWM2) (nwM3: NWM3) (urand: (r1 Rs))
       (rands: r2) (prins: (P Q Ps))} .
@@ -363,7 +363,7 @@ mod NSPK is
       (m3: empM3)
       (nw: (m2(Q,Q,P,enc2(P,N,n(Q,P,r2),dP))
                 m1(P',P,Q,enc1(Q,N,NON,P)) NW))
-      (nonces: (if ((P == intr) or (gen(n(Q,P,r2)) == intr)) then (n(Q,P,r2) N Ns) else Ns fi))
+      (nonces: (if k(enc2(P,N,n(Q,P,r2),dP)) == intr or (gen(n(Q,P,r2)) == intr) then (n(Q,P,r2) N Ns) else Ns fi))
       (nwM1: NWM1)
       (nwM2: (m2(Q,Q,P,enc2(P,N,n(Q,P,r2),dP)) NWM2)) 
       (nwM3: NWM3) (urand: (r2 Rs))
@@ -391,7 +391,7 @@ mod NSPK is
       (nwM1: NWM1)
       (nwM2: NWM2) 
       (nwM3: (m3(P,P,Q,enc3(Q,N',NON,dP)) NWM3)) (urand: Rs)
-      (nonces: (if Q == intr then (N' Ns) else Ns fi)) OCs} .
+      (nonces: (if k(enc3(Q,N',NON,dP)) == intr then (N' Ns) else Ns fi)) OCs} .
 
 *** intruder fakes the messages based on 
 *** 1)nonce gleaned by intruder
