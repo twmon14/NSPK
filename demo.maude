@@ -1,6 +1,6 @@
 in utils .
 in meta-utils .
-in nspk .   
+in nspk_new .   
 in metaSearch .
 
 mod DEMO is
