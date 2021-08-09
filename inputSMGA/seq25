@@ -1,0 +1,581 @@
+		     \||||||||||||||||||/
+		   --- Welcome to Maude ---
+		     /||||||||||||||||||\
+	     Maude 3.0 built: Dec 17 2019 12:08:10
+	     Copyright 1997-2019 SRI International
+		   Fri Jul 30 05:48:20 2021
+==========================================
+reduce in DEMO : downTermSearch(genSeq('NSPK, upTerm(init), 25)) .
+rewrites: 13854 in 619ms cpu (634ms real) (22348 rewrites/second)
+result ListConfig: {newmsg: m1(q, q, intr, enc1(intr, n(q, intr, r1), q))
+    recmsg1: empt recmsg2: empt isFake: false newCen1: empC1 newCen2: empC2
+    newCen3: empC3 cenc1: emp cenc2: emp cenc3: emp nw: m1(q, q, intr, enc1(
+    intr, n(q, intr, r1), q)) m1: m1(q, q, intr, enc1(intr, n(q, intr, r1), q))
+    m2: empM2 m3: empM3 nwM1: m1(q, q, intr, enc1(intr, n(q, intr, r1), q))
+    nwM2: emp nwM3: emp rands: r2 urand: r1 nonces: n(q, intr, r1) prins: (p q
+    intr)} || ({newmsg: m3(intr, intr, q, enc3(q, n(q, intr, r1))) recmsg1:
+    empt recmsg2: empt isFake: true newCen1: empC1 newCen2: empC2 newCen3:
+    enc3(q, n(q, intr, r1)) cenc1: emp cenc2: emp cenc3: enc3(q, n(q, intr,
+    r1)) nw: (m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m3(intr, intr, q,
+    enc3(q, n(q, intr, r1)))) m1: empM1 m2: empM2 m3: m3(intr, intr, q, enc3(q,
+    n(q, intr, r1))) nwM1: m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) nwM2:
+    emp nwM3: m3(intr, intr, q, enc3(q, n(q, intr, r1))) rands: r2 urand: r1
+    nonces: n(q, intr, r1) prins: (p q intr)} || ({newmsg: m1(p, p, intr, enc1(
+    intr, n(p, intr, r2), p)) recmsg1: empt recmsg2: empt isFake: false
+    newCen1: empC1 newCen2: empC2 newCen3: empC3 cenc1: emp cenc2: emp cenc3:
+    enc3(q, n(q, intr, r1)) nw: (m1(p, p, intr, enc1(intr, n(p, intr, r2), p))
+    m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m3(intr, intr, q, enc3(q, n(
+    q, intr, r1)))) m1: m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m2: empM2
+    m3: empM3 nwM1: (m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m1(q, q,
+    intr, enc1(intr, n(q, intr, r1), q))) nwM2: emp nwM3: m3(intr, intr, q,
+    enc3(q, n(q, intr, r1))) rands: emp urand: (r1 r2) nonces: (n(p, intr, r2)
+    n(q, intr, r1)) prins: (p q intr)} || ({newmsg: m1(intr, intr, p, enc1(p,
+    n(q, intr, r1), intr)) recmsg1: empt recmsg2: empt isFake: true newCen1:
+    enc1(p, n(q, intr, r1), intr) newCen2: empC2 newCen3: empC3 cenc1: enc1(p,
+    n(q, intr, r1), intr) cenc2: emp cenc3: enc3(q, n(q, intr, r1)) nw: (m1(p,
+    p, intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q,
+    intr, r1), q)) m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m3(intr,
+    intr, q, enc3(q, n(q, intr, r1)))) m1: m1(intr, intr, p, enc1(p, n(q, intr,
+    r1), intr)) m2: empM2 m3: empM3 nwM1: (m1(p, p, intr, enc1(intr, n(p, intr,
+    r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m1(intr, intr, p,
+    enc1(p, n(q, intr, r1), intr))) nwM2: emp nwM3: m3(intr, intr, q, enc3(q,
+    n(q, intr, r1))) rands: emp urand: (r1 r2) nonces: (n(p, intr, r2) n(q,
+    intr, r1)) prins: (p q intr)} || ({newmsg: m1(intr, p, q, enc1(p, n(q,
+    intr, r1), intr)) recmsg1: empt recmsg2: empt isFake: true newCen1: enc1(p,
+    n(q, intr, r1), intr) newCen2: empC2 newCen3: empC3 cenc1: enc1(p, n(q,
+    intr, r1), intr) cenc2: emp cenc3: enc3(q, n(q, intr, r1)) nw: (m1(p, p,
+    intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr,
+    r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, p,
+    enc1(p, n(q, intr, r1), intr)) m3(intr, intr, q, enc3(q, n(q, intr, r1))))
+    m1: m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m2: empM2 m3: empM3 nwM1:
+    (m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(
+    q, intr, r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr,
+    intr, p, enc1(p, n(q, intr, r1), intr))) nwM2: emp nwM3: m3(intr, intr, q,
+    enc3(q, n(q, intr, r1))) rands: emp urand: (r1 r2) nonces: (n(p, intr, r2)
+    n(q, intr, r1)) prins: (p q intr)} || ({newmsg: m2(intr, q, p, enc2(p, n(q,
+    intr, r1), n(p, intr, r2))) recmsg1: empt recmsg2: empt isFake: true
+    newCen1: empC1 newCen2: enc2(p, n(q, intr, r1), n(p, intr, r2)) newCen3:
+    empC3 cenc1: enc1(p, n(q, intr, r1), intr) cenc2: enc2(p, n(q, intr, r1),
+    n(p, intr, r2)) cenc3: enc3(q, n(q, intr, r1)) nw: (m1(p, p, intr, enc1(
+    intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m1(
+    intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, p, enc1(p, n(q,
+    intr, r1), intr)) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr, r2)))
+    m3(intr, intr, q, enc3(q, n(q, intr, r1)))) m1: empM1 m2: m2(intr, q, p,
+    enc2(p, n(q, intr, r1), n(p, intr, r2))) m3: empM3 nwM1: (m1(p, p, intr,
+    enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1),
+    q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, p, enc1(p,
+    n(q, intr, r1), intr))) nwM2: m2(intr, q, p, enc2(p, n(q, intr, r1), n(p,
+    intr, r2))) nwM3: m3(intr, intr, q, enc3(q, n(q, intr, r1))) rands: emp
+    urand: (r1 r2) nonces: (n(p, intr, r2) n(q, intr, r1)) prins: (p q intr)}
+    || ({newmsg: m3(intr, p, q, enc3(q, n(p, intr, r2))) recmsg1: empt recmsg2:
+    empt isFake: true newCen1: empC1 newCen2: empC2 newCen3: enc3(q, n(p, intr,
+    r2)) cenc1: enc1(p, n(q, intr, r1), intr) cenc2: enc2(p, n(q, intr, r1), n(
+    p, intr, r2)) cenc3: (enc3(q, n(p, intr, r2)) enc3(q, n(q, intr, r1))) nw:
+    (m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(
+    q, intr, r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr,
+    intr, p, enc1(p, n(q, intr, r1), intr)) m2(intr, q, p, enc2(p, n(q, intr,
+    r1), n(p, intr, r2))) m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr,
+    intr, q, enc3(q, n(q, intr, r1)))) m1: empM1 m2: empM2 m3: m3(intr, p, q,
+    enc3(q, n(p, intr, r2))) nwM1: (m1(p, p, intr, enc1(intr, n(p, intr, r2),
+    p)) m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m1(intr, p, q, enc1(p, n(
+    q, intr, r1), intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)))
+    nwM2: m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr, r2))) nwM3: (m3(
+    intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, intr, q, enc3(q, n(q, intr,
+    r1)))) rands: emp urand: (r1 r2) nonces: (n(p, intr, r2) n(q, intr, r1))
+    prins: (p q intr)} || ({newmsg: m3(intr, intr, p, enc3(p, n(q, intr, r1)))
+    recmsg1: empt recmsg2: empt isFake: true newCen1: empC1 newCen2: empC2
+    newCen3: enc3(p, n(q, intr, r1)) cenc1: enc1(p, n(q, intr, r1), intr)
+    cenc2: enc2(p, n(q, intr, r1), n(p, intr, r2)) cenc3: (enc3(p, n(q, intr,
+    r1)) enc3(q, n(p, intr, r2)) enc3(q, n(q, intr, r1))) nw: (m1(p, p, intr,
+    enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1),
+    q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, p, enc1(p,
+    n(q, intr, r1), intr)) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr,
+    r2))) m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, intr, p, enc3(p, n(
+    q, intr, r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) m1: empM1 m2:
+    empM2 m3: m3(intr, intr, p, enc3(p, n(q, intr, r1))) nwM1: (m1(p, p, intr,
+    enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1),
+    q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, p, enc1(p,
+    n(q, intr, r1), intr))) nwM2: m2(intr, q, p, enc2(p, n(q, intr, r1), n(p,
+    intr, r2))) nwM3: (m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, intr,
+    p, enc3(p, n(q, intr, r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1))))
+    rands: emp urand: (r1 r2) nonces: (n(p, intr, r2) n(q, intr, r1)) prins: (p
+    q intr)} || ({newmsg: m1(intr, intr, q, enc1(q, n(p, intr, r2), intr))
+    recmsg1: empt recmsg2: empt isFake: true newCen1: enc1(q, n(p, intr, r2),
+    intr) newCen2: empC2 newCen3: empC3 cenc1: (enc1(p, n(q, intr, r1), intr)
+    enc1(q, n(p, intr, r2), intr)) cenc2: enc2(p, n(q, intr, r1), n(p, intr,
+    r2)) cenc3: (enc3(p, n(q, intr, r1)) enc3(q, n(p, intr, r2)) enc3(q, n(q,
+    intr, r1))) nw: (m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m1(q, q,
+    intr, enc1(intr, n(q, intr, r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1),
+    intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q,
+    enc1(q, n(p, intr, r2), intr)) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p,
+    intr, r2))) m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, intr, p, enc3(
+    p, n(q, intr, r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) m1: m1(
+    intr, intr, q, enc1(q, n(p, intr, r2), intr)) m2: empM2 m3: empM3 nwM1: (
+    m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(
+    q, intr, r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr,
+    intr, p, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(q, n(p,
+    intr, r2), intr))) nwM2: m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr,
+    r2))) nwM3: (m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, intr, p,
+    enc3(p, n(q, intr, r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) rands:
+    emp urand: (r1 r2) nonces: (n(p, intr, r2) n(q, intr, r1)) prins: (p q
+    intr)} || ({newmsg: m3(intr, q, p, enc3(q, n(q, intr, r1))) recmsg1: empt
+    recmsg2: empt isFake: true newCen1: empC1 newCen2: empC2 newCen3: enc3(q,
+    n(q, intr, r1)) cenc1: (enc1(p, n(q, intr, r1), intr) enc1(q, n(p, intr,
+    r2), intr)) cenc2: enc2(p, n(q, intr, r1), n(p, intr, r2)) cenc3: (enc3(p,
+    n(q, intr, r1)) enc3(q, n(p, intr, r2)) enc3(q, n(q, intr, r1))) nw: (m1(p,
+    p, intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q,
+    intr, r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr,
+    p, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(q, n(p, intr, r2),
+    intr)) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr, r2))) m3(intr, p,
+    q, enc3(q, n(p, intr, r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(
+    intr, intr, p, enc3(p, n(q, intr, r1))) m3(intr, intr, q, enc3(q, n(q,
+    intr, r1)))) m1: empM1 m2: empM2 m3: m3(intr, q, p, enc3(q, n(q, intr,
+    r1))) nwM1: (m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr,
+    enc1(intr, n(q, intr, r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1),
+    intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q,
+    enc1(q, n(p, intr, r2), intr))) nwM2: m2(intr, q, p, enc2(p, n(q, intr,
+    r1), n(p, intr, r2))) nwM3: (m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(
+    intr, q, p, enc3(q, n(q, intr, r1))) m3(intr, intr, p, enc3(p, n(q, intr,
+    r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) rands: emp urand: (r1 r2)
+    nonces: (n(p, intr, r2) n(q, intr, r1)) prins: (p q intr)} || ({newmsg: m2(
+    intr, p, q, enc2(q, n(q, intr, r1), n(p, intr, r2))) recmsg1: empt recmsg2:
+    empt isFake: true newCen1: empC1 newCen2: enc2(q, n(q, intr, r1), n(p,
+    intr, r2)) newCen3: empC3 cenc1: (enc1(p, n(q, intr, r1), intr) enc1(q, n(
+    p, intr, r2), intr)) cenc2: (enc2(p, n(q, intr, r1), n(p, intr, r2)) enc2(
+    q, n(q, intr, r1), n(p, intr, r2))) cenc3: (enc3(p, n(q, intr, r1)) enc3(q,
+    n(p, intr, r2)) enc3(q, n(q, intr, r1))) nw: (m1(p, p, intr, enc1(intr, n(
+    p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m1(intr, p,
+    q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1),
+    intr)) m1(intr, intr, q, enc1(q, n(p, intr, r2), intr)) m2(intr, p, q,
+    enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(intr, q, p, enc2(p, n(q, intr,
+    r1), n(p, intr, r2))) m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, q,
+    p, enc3(q, n(q, intr, r1))) m3(intr, intr, p, enc3(p, n(q, intr, r1))) m3(
+    intr, intr, q, enc3(q, n(q, intr, r1)))) m1: empM1 m2: m2(intr, p, q, enc2(
+    q, n(q, intr, r1), n(p, intr, r2))) m3: empM3 nwM1: (m1(p, p, intr, enc1(
+    intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m1(
+    intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, p, enc1(p, n(q,
+    intr, r1), intr)) m1(intr, intr, q, enc1(q, n(p, intr, r2), intr))) nwM2: (
+    m2(intr, p, q, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(intr, q, p,
+    enc2(p, n(q, intr, r1), n(p, intr, r2)))) nwM3: (m3(intr, p, q, enc3(q, n(
+    p, intr, r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(intr, intr, p,
+    enc3(p, n(q, intr, r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) rands:
+    emp urand: (r1 r2) nonces: (n(p, intr, r2) n(q, intr, r1)) prins: (p q
+    intr)} || ({newmsg: m3(intr, q, p, enc3(p, n(p, intr, r2))) recmsg1: empt
+    recmsg2: empt isFake: true newCen1: empC1 newCen2: empC2 newCen3: enc3(p,
+    n(p, intr, r2)) cenc1: (enc1(p, n(q, intr, r1), intr) enc1(q, n(p, intr,
+    r2), intr)) cenc2: (enc2(p, n(q, intr, r1), n(p, intr, r2)) enc2(q, n(q,
+    intr, r1), n(p, intr, r2))) cenc3: (enc3(p, n(p, intr, r2)) enc3(p, n(q,
+    intr, r1)) enc3(q, n(p, intr, r2)) enc3(q, n(q, intr, r1))) nw: (m1(p, p,
+    intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr,
+    r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, p,
+    enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(q, n(p, intr, r2),
+    intr)) m2(intr, p, q, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(intr, q,
+    p, enc2(p, n(q, intr, r1), n(p, intr, r2))) m3(intr, p, q, enc3(q, n(p,
+    intr, r2))) m3(intr, q, p, enc3(p, n(p, intr, r2))) m3(intr, q, p, enc3(q,
+    n(q, intr, r1))) m3(intr, intr, p, enc3(p, n(q, intr, r1))) m3(intr, intr,
+    q, enc3(q, n(q, intr, r1)))) m1: empM1 m2: empM2 m3: m3(intr, q, p, enc3(p,
+    n(p, intr, r2))) nwM1: (m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m1(q,
+    q, intr, enc1(intr, n(q, intr, r1), q)) m1(intr, p, q, enc1(p, n(q, intr,
+    r1), intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(intr, intr,
+    q, enc1(q, n(p, intr, r2), intr))) nwM2: (m2(intr, p, q, enc2(q, n(q, intr,
+    r1), n(p, intr, r2))) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr,
+    r2)))) nwM3: (m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, q, p, enc3(
+    p, n(p, intr, r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(intr, intr,
+    p, enc3(p, n(q, intr, r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1))))
+    rands: emp urand: (r1 r2) nonces: (n(p, intr, r2) n(q, intr, r1)) prins: (p
+    q intr)} || ({newmsg: m1(intr, intr, p, enc1(p, n(p, intr, r2), intr))
+    recmsg1: empt recmsg2: empt isFake: true newCen1: enc1(p, n(p, intr, r2),
+    intr) newCen2: empC2 newCen3: empC3 cenc1: (enc1(p, n(p, intr, r2), intr)
+    enc1(p, n(q, intr, r1), intr) enc1(q, n(p, intr, r2), intr)) cenc2: (enc2(
+    p, n(q, intr, r1), n(p, intr, r2)) enc2(q, n(q, intr, r1), n(p, intr, r2)))
+    cenc3: (enc3(p, n(p, intr, r2)) enc3(p, n(q, intr, r1)) enc3(q, n(p, intr,
+    r2)) enc3(q, n(q, intr, r1))) nw: (m1(p, p, intr, enc1(intr, n(p, intr,
+    r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m1(intr, p, q, enc1(
+    p, n(q, intr, r1), intr)) m1(intr, intr, p, enc1(p, n(p, intr, r2), intr))
+    m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(q,
+    n(p, intr, r2), intr)) m2(intr, p, q, enc2(q, n(q, intr, r1), n(p, intr,
+    r2))) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr, r2))) m3(intr, p,
+    q, enc3(q, n(p, intr, r2))) m3(intr, q, p, enc3(p, n(p, intr, r2))) m3(
+    intr, q, p, enc3(q, n(q, intr, r1))) m3(intr, intr, p, enc3(p, n(q, intr,
+    r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) m1: m1(intr, intr, p,
+    enc1(p, n(p, intr, r2), intr)) m2: empM2 m3: empM3 nwM1: (m1(p, p, intr,
+    enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1),
+    q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, p, enc1(p,
+    n(p, intr, r2), intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(
+    intr, intr, q, enc1(q, n(p, intr, r2), intr))) nwM2: (m2(intr, p, q, enc2(
+    q, n(q, intr, r1), n(p, intr, r2))) m2(intr, q, p, enc2(p, n(q, intr, r1),
+    n(p, intr, r2)))) nwM3: (m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr,
+    q, p, enc3(p, n(p, intr, r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(
+    intr, intr, p, enc3(p, n(q, intr, r1))) m3(intr, intr, q, enc3(q, n(q,
+    intr, r1)))) rands: emp urand: (r1 r2) nonces: (n(p, intr, r2) n(q, intr,
+    r1)) prins: (p q intr)} || ({newmsg: m1(intr, p, q, enc1(p, n(q, intr, r1),
+    intr)) recmsg1: empt recmsg2: empt isFake: true newCen1: enc1(p, n(q, intr,
+    r1), intr) newCen2: empC2 newCen3: empC3 cenc1: (enc1(p, n(p, intr, r2),
+    intr) enc1(p, n(q, intr, r1), intr) enc1(q, n(p, intr, r2), intr)) cenc2: (
+    enc2(p, n(q, intr, r1), n(p, intr, r2)) enc2(q, n(q, intr, r1), n(p, intr,
+    r2))) cenc3: (enc3(p, n(p, intr, r2)) enc3(p, n(q, intr, r1)) enc3(q, n(p,
+    intr, r2)) enc3(q, n(q, intr, r1))) nw: (m1(p, p, intr, enc1(intr, n(p,
+    intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m1(intr, p, q,
+    enc1(p, n(q, intr, r1), intr)) m1(intr, intr, p, enc1(p, n(p, intr, r2),
+    intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q,
+    enc1(q, n(p, intr, r2), intr)) m2(intr, p, q, enc2(q, n(q, intr, r1), n(p,
+    intr, r2))) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr, r2))) m3(
+    intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, q, p, enc3(p, n(p, intr,
+    r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(intr, intr, p, enc3(p, n(
+    q, intr, r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) m1: m1(intr, p,
+    q, enc1(p, n(q, intr, r1), intr)) m2: empM2 m3: empM3 nwM1: (m1(p, p, intr,
+    enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1),
+    q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, p, enc1(p,
+    n(p, intr, r2), intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(
+    intr, intr, q, enc1(q, n(p, intr, r2), intr))) nwM2: (m2(intr, p, q, enc2(
+    q, n(q, intr, r1), n(p, intr, r2))) m2(intr, q, p, enc2(p, n(q, intr, r1),
+    n(p, intr, r2)))) nwM3: (m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr,
+    q, p, enc3(p, n(p, intr, r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(
+    intr, intr, p, enc3(p, n(q, intr, r1))) m3(intr, intr, q, enc3(q, n(q,
+    intr, r1)))) rands: emp urand: (r1 r2) nonces: (n(p, intr, r2) n(q, intr,
+    r1)) prins: (p q intr)} || ({newmsg: m1(intr, intr, q, enc1(q, n(p, intr,
+    r2), intr)) recmsg1: empt recmsg2: empt isFake: true newCen1: enc1(q, n(p,
+    intr, r2), intr) newCen2: empC2 newCen3: empC3 cenc1: (enc1(p, n(p, intr,
+    r2), intr) enc1(p, n(q, intr, r1), intr) enc1(q, n(p, intr, r2), intr))
+    cenc2: (enc2(p, n(q, intr, r1), n(p, intr, r2)) enc2(q, n(q, intr, r1), n(
+    p, intr, r2))) cenc3: (enc3(p, n(p, intr, r2)) enc3(p, n(q, intr, r1))
+    enc3(q, n(p, intr, r2)) enc3(q, n(q, intr, r1))) nw: (m1(p, p, intr, enc1(
+    intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m1(
+    intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, p, enc1(p, n(p,
+    intr, r2), intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(intr,
+    intr, q, enc1(q, n(p, intr, r2), intr)) m2(intr, p, q, enc2(q, n(q, intr,
+    r1), n(p, intr, r2))) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr,
+    r2))) m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, q, p, enc3(p, n(p,
+    intr, r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(intr, intr, p, enc3(
+    p, n(q, intr, r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) m1: m1(
+    intr, intr, q, enc1(q, n(p, intr, r2), intr)) m2: empM2 m3: empM3 nwM1: (
+    m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(
+    q, intr, r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr,
+    intr, p, enc1(p, n(p, intr, r2), intr)) m1(intr, intr, p, enc1(p, n(q,
+    intr, r1), intr)) m1(intr, intr, q, enc1(q, n(p, intr, r2), intr))) nwM2: (
+    m2(intr, p, q, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(intr, q, p,
+    enc2(p, n(q, intr, r1), n(p, intr, r2)))) nwM3: (m3(intr, p, q, enc3(q, n(
+    p, intr, r2))) m3(intr, q, p, enc3(p, n(p, intr, r2))) m3(intr, q, p, enc3(
+    q, n(q, intr, r1))) m3(intr, intr, p, enc3(p, n(q, intr, r1))) m3(intr,
+    intr, q, enc3(q, n(q, intr, r1)))) rands: emp urand: (r1 r2) nonces: (n(p,
+    intr, r2) n(q, intr, r1)) prins: (p q intr)} || ({newmsg: m3(intr, p, q,
+    enc3(p, n(q, intr, r1))) recmsg1: empt recmsg2: empt isFake: true newCen1:
+    empC1 newCen2: empC2 newCen3: enc3(p, n(q, intr, r1)) cenc1: (enc1(p, n(p,
+    intr, r2), intr) enc1(p, n(q, intr, r1), intr) enc1(q, n(p, intr, r2),
+    intr)) cenc2: (enc2(p, n(q, intr, r1), n(p, intr, r2)) enc2(q, n(q, intr,
+    r1), n(p, intr, r2))) cenc3: (enc3(p, n(p, intr, r2)) enc3(p, n(q, intr,
+    r1)) enc3(q, n(p, intr, r2)) enc3(q, n(q, intr, r1))) nw: (m1(p, p, intr,
+    enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1),
+    q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, p, enc1(p,
+    n(p, intr, r2), intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(
+    intr, intr, q, enc1(q, n(p, intr, r2), intr)) m2(intr, p, q, enc2(q, n(q,
+    intr, r1), n(p, intr, r2))) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p,
+    intr, r2))) m3(intr, p, q, enc3(p, n(q, intr, r1))) m3(intr, p, q, enc3(q,
+    n(p, intr, r2))) m3(intr, q, p, enc3(p, n(p, intr, r2))) m3(intr, q, p,
+    enc3(q, n(q, intr, r1))) m3(intr, intr, p, enc3(p, n(q, intr, r1))) m3(
+    intr, intr, q, enc3(q, n(q, intr, r1)))) m1: empM1 m2: empM2 m3: m3(intr,
+    p, q, enc3(p, n(q, intr, r1))) nwM1: (m1(p, p, intr, enc1(intr, n(p, intr,
+    r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m1(intr, p, q, enc1(
+    p, n(q, intr, r1), intr)) m1(intr, intr, p, enc1(p, n(p, intr, r2), intr))
+    m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(q,
+    n(p, intr, r2), intr))) nwM2: (m2(intr, p, q, enc2(q, n(q, intr, r1), n(p,
+    intr, r2))) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr, r2)))) nwM3:
+    (m3(intr, p, q, enc3(p, n(q, intr, r1))) m3(intr, p, q, enc3(q, n(p, intr,
+    r2))) m3(intr, q, p, enc3(p, n(p, intr, r2))) m3(intr, q, p, enc3(q, n(q,
+    intr, r1))) m3(intr, intr, p, enc3(p, n(q, intr, r1))) m3(intr, intr, q,
+    enc3(q, n(q, intr, r1)))) rands: emp urand: (r1 r2) nonces: (n(p, intr, r2)
+    n(q, intr, r1)) prins: (p q intr)} || ({newmsg: m2(intr, intr, p, enc2(q,
+    n(q, intr, r1), n(p, intr, r2))) recmsg1: empt recmsg2: empt isFake: true
+    newCen1: empC1 newCen2: enc2(q, n(q, intr, r1), n(p, intr, r2)) newCen3:
+    empC3 cenc1: (enc1(p, n(p, intr, r2), intr) enc1(p, n(q, intr, r1), intr)
+    enc1(q, n(p, intr, r2), intr)) cenc2: (enc2(p, n(q, intr, r1), n(p, intr,
+    r2)) enc2(q, n(q, intr, r1), n(p, intr, r2))) cenc3: (enc3(p, n(p, intr,
+    r2)) enc3(p, n(q, intr, r1)) enc3(q, n(p, intr, r2)) enc3(q, n(q, intr,
+    r1))) nw: (m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr,
+    enc1(intr, n(q, intr, r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1),
+    intr)) m1(intr, intr, p, enc1(p, n(p, intr, r2), intr)) m1(intr, intr, p,
+    enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(q, n(p, intr, r2),
+    intr)) m2(intr, p, q, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(intr, q,
+    p, enc2(p, n(q, intr, r1), n(p, intr, r2))) m2(intr, intr, p, enc2(q, n(q,
+    intr, r1), n(p, intr, r2))) m3(intr, p, q, enc3(p, n(q, intr, r1))) m3(
+    intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, q, p, enc3(p, n(p, intr,
+    r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(intr, intr, p, enc3(p, n(
+    q, intr, r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) m1: empM1 m2:
+    m2(intr, intr, p, enc2(q, n(q, intr, r1), n(p, intr, r2))) m3: empM3 nwM1:
+    (m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(
+    q, intr, r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr,
+    intr, p, enc1(p, n(p, intr, r2), intr)) m1(intr, intr, p, enc1(p, n(q,
+    intr, r1), intr)) m1(intr, intr, q, enc1(q, n(p, intr, r2), intr))) nwM2: (
+    m2(intr, p, q, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(intr, q, p,
+    enc2(p, n(q, intr, r1), n(p, intr, r2))) m2(intr, intr, p, enc2(q, n(q,
+    intr, r1), n(p, intr, r2)))) nwM3: (m3(intr, p, q, enc3(p, n(q, intr, r1)))
+    m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, q, p, enc3(p, n(p, intr,
+    r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(intr, intr, p, enc3(p, n(
+    q, intr, r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) rands: emp
+    urand: (r1 r2) nonces: (n(p, intr, r2) n(q, intr, r1)) prins: (p q intr)}
+    || ({newmsg: m1(intr, p, q, enc1(q, n(p, intr, r2), p)) recmsg1: empt
+    recmsg2: empt isFake: true newCen1: enc1(q, n(p, intr, r2), p) newCen2:
+    empC2 newCen3: empC3 cenc1: (enc1(p, n(p, intr, r2), intr) enc1(p, n(q,
+    intr, r1), intr) enc1(q, n(p, intr, r2), p) enc1(q, n(p, intr, r2), intr))
+    cenc2: (enc2(p, n(q, intr, r1), n(p, intr, r2)) enc2(q, n(q, intr, r1), n(
+    p, intr, r2))) cenc3: (enc3(p, n(p, intr, r2)) enc3(p, n(q, intr, r1))
+    enc3(q, n(p, intr, r2)) enc3(q, n(q, intr, r1))) nw: (m1(p, p, intr, enc1(
+    intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m1(
+    intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, p, q, enc1(q, n(p,
+    intr, r2), p)) m1(intr, intr, p, enc1(p, n(p, intr, r2), intr)) m1(intr,
+    intr, p, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(q, n(p,
+    intr, r2), intr)) m2(intr, p, q, enc2(q, n(q, intr, r1), n(p, intr, r2)))
+    m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr, r2))) m2(intr, intr, p,
+    enc2(q, n(q, intr, r1), n(p, intr, r2))) m3(intr, p, q, enc3(p, n(q, intr,
+    r1))) m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, q, p, enc3(p, n(p,
+    intr, r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(intr, intr, p, enc3(
+    p, n(q, intr, r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) m1: m1(
+    intr, p, q, enc1(q, n(p, intr, r2), p)) m2: empM2 m3: empM3 nwM1: (m1(p, p,
+    intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr,
+    r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, p, q, enc1(
+    q, n(p, intr, r2), p)) m1(intr, intr, p, enc1(p, n(p, intr, r2), intr)) m1(
+    intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(q, n(
+    p, intr, r2), intr))) nwM2: (m2(intr, p, q, enc2(q, n(q, intr, r1), n(p,
+    intr, r2))) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr, r2))) m2(
+    intr, intr, p, enc2(q, n(q, intr, r1), n(p, intr, r2)))) nwM3: (m3(intr, p,
+    q, enc3(p, n(q, intr, r1))) m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(
+    intr, q, p, enc3(p, n(p, intr, r2))) m3(intr, q, p, enc3(q, n(q, intr,
+    r1))) m3(intr, intr, p, enc3(p, n(q, intr, r1))) m3(intr, intr, q, enc3(q,
+    n(q, intr, r1)))) rands: emp urand: (r1 r2) nonces: (n(p, intr, r2) n(q,
+    intr, r1)) prins: (p q intr)} || ({newmsg: m1(intr, intr, q, enc1(p, n(q,
+    intr, r1), intr)) recmsg1: empt recmsg2: empt isFake: true newCen1: enc1(p,
+    n(q, intr, r1), intr) newCen2: empC2 newCen3: empC3 cenc1: (enc1(p, n(p,
+    intr, r2), intr) enc1(p, n(q, intr, r1), intr) enc1(q, n(p, intr, r2), p)
+    enc1(q, n(p, intr, r2), intr)) cenc2: (enc2(p, n(q, intr, r1), n(p, intr,
+    r2)) enc2(q, n(q, intr, r1), n(p, intr, r2))) cenc3: (enc3(p, n(p, intr,
+    r2)) enc3(p, n(q, intr, r1)) enc3(q, n(p, intr, r2)) enc3(q, n(q, intr,
+    r1))) nw: (m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr,
+    enc1(intr, n(q, intr, r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1),
+    intr)) m1(intr, p, q, enc1(q, n(p, intr, r2), p)) m1(intr, intr, p, enc1(p,
+    n(p, intr, r2), intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(
+    intr, intr, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(q, n(
+    p, intr, r2), intr)) m2(intr, p, q, enc2(q, n(q, intr, r1), n(p, intr,
+    r2))) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr, r2))) m2(intr,
+    intr, p, enc2(q, n(q, intr, r1), n(p, intr, r2))) m3(intr, p, q, enc3(p, n(
+    q, intr, r1))) m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, q, p, enc3(
+    p, n(p, intr, r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(intr, intr,
+    p, enc3(p, n(q, intr, r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) m1:
+    m1(intr, intr, q, enc1(p, n(q, intr, r1), intr)) m2: empM2 m3: empM3 nwM1:
+    (m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(
+    q, intr, r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, p,
+    q, enc1(q, n(p, intr, r2), p)) m1(intr, intr, p, enc1(p, n(p, intr, r2),
+    intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q,
+    enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(q, n(p, intr, r2),
+    intr))) nwM2: (m2(intr, p, q, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(
+    intr, q, p, enc2(p, n(q, intr, r1), n(p, intr, r2))) m2(intr, intr, p,
+    enc2(q, n(q, intr, r1), n(p, intr, r2)))) nwM3: (m3(intr, p, q, enc3(p, n(
+    q, intr, r1))) m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, q, p, enc3(
+    p, n(p, intr, r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(intr, intr,
+    p, enc3(p, n(q, intr, r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1))))
+    rands: emp urand: (r1 r2) nonces: (n(p, intr, r2) n(q, intr, r1)) prins: (p
+    q intr)} || ({newmsg: m2(intr, intr, q, enc2(p, n(q, intr, r1), n(p, intr,
+    r2))) recmsg1: empt recmsg2: empt isFake: true newCen1: empC1 newCen2:
+    enc2(p, n(q, intr, r1), n(p, intr, r2)) newCen3: empC3 cenc1: (enc1(p, n(p,
+    intr, r2), intr) enc1(p, n(q, intr, r1), intr) enc1(q, n(p, intr, r2), p)
+    enc1(q, n(p, intr, r2), intr)) cenc2: (enc2(p, n(q, intr, r1), n(p, intr,
+    r2)) enc2(q, n(q, intr, r1), n(p, intr, r2))) cenc3: (enc3(p, n(p, intr,
+    r2)) enc3(p, n(q, intr, r1)) enc3(q, n(p, intr, r2)) enc3(q, n(q, intr,
+    r1))) nw: (m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr,
+    enc1(intr, n(q, intr, r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1),
+    intr)) m1(intr, p, q, enc1(q, n(p, intr, r2), p)) m1(intr, intr, p, enc1(p,
+    n(p, intr, r2), intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(
+    intr, intr, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(q, n(
+    p, intr, r2), intr)) m2(intr, p, q, enc2(q, n(q, intr, r1), n(p, intr,
+    r2))) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr, r2))) m2(intr,
+    intr, p, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(intr, intr, q, enc2(p,
+    n(q, intr, r1), n(p, intr, r2))) m3(intr, p, q, enc3(p, n(q, intr, r1)))
+    m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, q, p, enc3(p, n(p, intr,
+    r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(intr, intr, p, enc3(p, n(
+    q, intr, r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) m1: empM1 m2:
+    m2(intr, intr, q, enc2(p, n(q, intr, r1), n(p, intr, r2))) m3: empM3 nwM1:
+    (m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(
+    q, intr, r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, p,
+    q, enc1(q, n(p, intr, r2), p)) m1(intr, intr, p, enc1(p, n(p, intr, r2),
+    intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q,
+    enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(q, n(p, intr, r2),
+    intr))) nwM2: (m2(intr, p, q, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(
+    intr, q, p, enc2(p, n(q, intr, r1), n(p, intr, r2))) m2(intr, intr, p,
+    enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(intr, intr, q, enc2(p, n(q,
+    intr, r1), n(p, intr, r2)))) nwM3: (m3(intr, p, q, enc3(p, n(q, intr, r1)))
+    m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, q, p, enc3(p, n(p, intr,
+    r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(intr, intr, p, enc3(p, n(
+    q, intr, r1))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) rands: emp
+    urand: (r1 r2) nonces: (n(p, intr, r2) n(q, intr, r1)) prins: (p q intr)}
+    || ({newmsg: m3(intr, intr, q, enc3(p, n(p, intr, r2))) recmsg1: empt
+    recmsg2: empt isFake: true newCen1: empC1 newCen2: empC2 newCen3: enc3(p,
+    n(p, intr, r2)) cenc1: (enc1(p, n(p, intr, r2), intr) enc1(p, n(q, intr,
+    r1), intr) enc1(q, n(p, intr, r2), p) enc1(q, n(p, intr, r2), intr)) cenc2:
+    (enc2(p, n(q, intr, r1), n(p, intr, r2)) enc2(q, n(q, intr, r1), n(p, intr,
+    r2))) cenc3: (enc3(p, n(p, intr, r2)) enc3(p, n(q, intr, r1)) enc3(q, n(p,
+    intr, r2)) enc3(q, n(q, intr, r1))) nw: (m1(p, p, intr, enc1(intr, n(p,
+    intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m1(intr, p, q,
+    enc1(p, n(q, intr, r1), intr)) m1(intr, p, q, enc1(q, n(p, intr, r2), p))
+    m1(intr, intr, p, enc1(p, n(p, intr, r2), intr)) m1(intr, intr, p, enc1(p,
+    n(q, intr, r1), intr)) m1(intr, intr, q, enc1(p, n(q, intr, r1), intr)) m1(
+    intr, intr, q, enc1(q, n(p, intr, r2), intr)) m2(intr, p, q, enc2(q, n(q,
+    intr, r1), n(p, intr, r2))) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p,
+    intr, r2))) m2(intr, intr, p, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(
+    intr, intr, q, enc2(p, n(q, intr, r1), n(p, intr, r2))) m3(intr, p, q,
+    enc3(p, n(q, intr, r1))) m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr,
+    q, p, enc3(p, n(p, intr, r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(
+    intr, intr, p, enc3(p, n(q, intr, r1))) m3(intr, intr, q, enc3(p, n(p,
+    intr, r2))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) m1: empM1 m2: empM2
+    m3: m3(intr, intr, q, enc3(p, n(p, intr, r2))) nwM1: (m1(p, p, intr, enc1(
+    intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m1(
+    intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, p, q, enc1(q, n(p,
+    intr, r2), p)) m1(intr, intr, p, enc1(p, n(p, intr, r2), intr)) m1(intr,
+    intr, p, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(p, n(q,
+    intr, r1), intr)) m1(intr, intr, q, enc1(q, n(p, intr, r2), intr))) nwM2: (
+    m2(intr, p, q, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(intr, q, p,
+    enc2(p, n(q, intr, r1), n(p, intr, r2))) m2(intr, intr, p, enc2(q, n(q,
+    intr, r1), n(p, intr, r2))) m2(intr, intr, q, enc2(p, n(q, intr, r1), n(p,
+    intr, r2)))) nwM3: (m3(intr, p, q, enc3(p, n(q, intr, r1))) m3(intr, p, q,
+    enc3(q, n(p, intr, r2))) m3(intr, q, p, enc3(p, n(p, intr, r2))) m3(intr,
+    q, p, enc3(q, n(q, intr, r1))) m3(intr, intr, p, enc3(p, n(q, intr, r1)))
+    m3(intr, intr, q, enc3(p, n(p, intr, r2))) m3(intr, intr, q, enc3(q, n(q,
+    intr, r1)))) rands: emp urand: (r1 r2) nonces: (n(p, intr, r2) n(q, intr,
+    r1)) prins: (p q intr)} || ({newmsg: m2(intr, intr, q, enc2(p, n(q, intr,
+    r1), n(p, intr, r2))) recmsg1: empt recmsg2: empt isFake: true newCen1:
+    empC1 newCen2: enc2(p, n(q, intr, r1), n(p, intr, r2)) newCen3: empC3
+    cenc1: (enc1(p, n(p, intr, r2), intr) enc1(p, n(q, intr, r1), intr) enc1(q,
+    n(p, intr, r2), p) enc1(q, n(p, intr, r2), intr)) cenc2: (enc2(p, n(q,
+    intr, r1), n(p, intr, r2)) enc2(q, n(q, intr, r1), n(p, intr, r2))) cenc3:
+    (enc3(p, n(p, intr, r2)) enc3(p, n(q, intr, r1)) enc3(q, n(p, intr, r2))
+    enc3(q, n(q, intr, r1))) nw: (m1(p, p, intr, enc1(intr, n(p, intr, r2), p))
+    m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m1(intr, p, q, enc1(p, n(q,
+    intr, r1), intr)) m1(intr, p, q, enc1(q, n(p, intr, r2), p)) m1(intr, intr,
+    p, enc1(p, n(p, intr, r2), intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1),
+    intr)) m1(intr, intr, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q,
+    enc1(q, n(p, intr, r2), intr)) m2(intr, p, q, enc2(q, n(q, intr, r1), n(p,
+    intr, r2))) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr, r2))) m2(
+    intr, intr, p, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(intr, intr, q,
+    enc2(p, n(q, intr, r1), n(p, intr, r2))) m3(intr, p, q, enc3(p, n(q, intr,
+    r1))) m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, q, p, enc3(p, n(p,
+    intr, r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(intr, intr, p, enc3(
+    p, n(q, intr, r1))) m3(intr, intr, q, enc3(p, n(p, intr, r2))) m3(intr,
+    intr, q, enc3(q, n(q, intr, r1)))) m1: empM1 m2: m2(intr, intr, q, enc2(p,
+    n(q, intr, r1), n(p, intr, r2))) m3: empM3 nwM1: (m1(p, p, intr, enc1(intr,
+    n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m1(intr,
+    p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, p, q, enc1(q, n(p, intr, r2),
+    p)) m1(intr, intr, p, enc1(p, n(p, intr, r2), intr)) m1(intr, intr, p,
+    enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(p, n(q, intr, r1),
+    intr)) m1(intr, intr, q, enc1(q, n(p, intr, r2), intr))) nwM2: (m2(intr, p,
+    q, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(intr, q, p, enc2(p, n(q,
+    intr, r1), n(p, intr, r2))) m2(intr, intr, p, enc2(q, n(q, intr, r1), n(p,
+    intr, r2))) m2(intr, intr, q, enc2(p, n(q, intr, r1), n(p, intr, r2))))
+    nwM3: (m3(intr, p, q, enc3(p, n(q, intr, r1))) m3(intr, p, q, enc3(q, n(p,
+    intr, r2))) m3(intr, q, p, enc3(p, n(p, intr, r2))) m3(intr, q, p, enc3(q,
+    n(q, intr, r1))) m3(intr, intr, p, enc3(p, n(q, intr, r1))) m3(intr, intr,
+    q, enc3(p, n(p, intr, r2))) m3(intr, intr, q, enc3(q, n(q, intr, r1))))
+    rands: emp urand: (r1 r2) nonces: (n(p, intr, r2) n(q, intr, r1)) prins: (p
+    q intr)} || ({newmsg: m1(intr, q, p, enc1(p, n(p, intr, r2), intr))
+    recmsg1: empt recmsg2: empt isFake: true newCen1: enc1(p, n(p, intr, r2),
+    intr) newCen2: empC2 newCen3: empC3 cenc1: (enc1(p, n(p, intr, r2), intr)
+    enc1(p, n(q, intr, r1), intr) enc1(q, n(p, intr, r2), p) enc1(q, n(p, intr,
+    r2), intr)) cenc2: (enc2(p, n(q, intr, r1), n(p, intr, r2)) enc2(q, n(q,
+    intr, r1), n(p, intr, r2))) cenc3: (enc3(p, n(p, intr, r2)) enc3(p, n(q,
+    intr, r1)) enc3(q, n(p, intr, r2)) enc3(q, n(q, intr, r1))) nw: (m1(p, p,
+    intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr,
+    r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, p, q, enc1(
+    q, n(p, intr, r2), p)) m1(intr, q, p, enc1(p, n(p, intr, r2), intr)) m1(
+    intr, intr, p, enc1(p, n(p, intr, r2), intr)) m1(intr, intr, p, enc1(p, n(
+    q, intr, r1), intr)) m1(intr, intr, q, enc1(p, n(q, intr, r1), intr)) m1(
+    intr, intr, q, enc1(q, n(p, intr, r2), intr)) m2(intr, p, q, enc2(q, n(q,
+    intr, r1), n(p, intr, r2))) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p,
+    intr, r2))) m2(intr, intr, p, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(
+    intr, intr, q, enc2(p, n(q, intr, r1), n(p, intr, r2))) m3(intr, p, q,
+    enc3(p, n(q, intr, r1))) m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr,
+    q, p, enc3(p, n(p, intr, r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(
+    intr, intr, p, enc3(p, n(q, intr, r1))) m3(intr, intr, q, enc3(p, n(p,
+    intr, r2))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) m1: m1(intr, q, p,
+    enc1(p, n(p, intr, r2), intr)) m2: empM2 m3: empM3 nwM1: (m1(p, p, intr,
+    enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1),
+    q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, p, q, enc1(q, n(
+    p, intr, r2), p)) m1(intr, q, p, enc1(p, n(p, intr, r2), intr)) m1(intr,
+    intr, p, enc1(p, n(p, intr, r2), intr)) m1(intr, intr, p, enc1(p, n(q,
+    intr, r1), intr)) m1(intr, intr, q, enc1(p, n(q, intr, r1), intr)) m1(intr,
+    intr, q, enc1(q, n(p, intr, r2), intr))) nwM2: (m2(intr, p, q, enc2(q, n(q,
+    intr, r1), n(p, intr, r2))) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p,
+    intr, r2))) m2(intr, intr, p, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(
+    intr, intr, q, enc2(p, n(q, intr, r1), n(p, intr, r2)))) nwM3: (m3(intr, p,
+    q, enc3(p, n(q, intr, r1))) m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(
+    intr, q, p, enc3(p, n(p, intr, r2))) m3(intr, q, p, enc3(q, n(q, intr,
+    r1))) m3(intr, intr, p, enc3(p, n(q, intr, r1))) m3(intr, intr, q, enc3(p,
+    n(p, intr, r2))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) rands: emp
+    urand: (r1 r2) nonces: (n(p, intr, r2) n(q, intr, r1)) prins: (p q intr)}
+    || ({newmsg: m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) recmsg1: empt
+    recmsg2: empt isFake: true newCen1: enc1(p, n(q, intr, r1), intr) newCen2:
+    empC2 newCen3: empC3 cenc1: (enc1(p, n(p, intr, r2), intr) enc1(p, n(q,
+    intr, r1), intr) enc1(q, n(p, intr, r2), p) enc1(q, n(p, intr, r2), intr))
+    cenc2: (enc2(p, n(q, intr, r1), n(p, intr, r2)) enc2(q, n(q, intr, r1), n(
+    p, intr, r2))) cenc3: (enc3(p, n(p, intr, r2)) enc3(p, n(q, intr, r1))
+    enc3(q, n(p, intr, r2)) enc3(q, n(q, intr, r1))) nw: (m1(p, p, intr, enc1(
+    intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m1(
+    intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, p, q, enc1(q, n(p,
+    intr, r2), p)) m1(intr, q, p, enc1(p, n(p, intr, r2), intr)) m1(intr, intr,
+    p, enc1(p, n(p, intr, r2), intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1),
+    intr)) m1(intr, intr, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q,
+    enc1(q, n(p, intr, r2), intr)) m2(intr, p, q, enc2(q, n(q, intr, r1), n(p,
+    intr, r2))) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr, r2))) m2(
+    intr, intr, p, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(intr, intr, q,
+    enc2(p, n(q, intr, r1), n(p, intr, r2))) m3(intr, p, q, enc3(p, n(q, intr,
+    r1))) m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, q, p, enc3(p, n(p,
+    intr, r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(intr, intr, p, enc3(
+    p, n(q, intr, r1))) m3(intr, intr, q, enc3(p, n(p, intr, r2))) m3(intr,
+    intr, q, enc3(q, n(q, intr, r1)))) m1: m1(intr, intr, p, enc1(p, n(q, intr,
+    r1), intr)) m2: empM2 m3: empM3 nwM1: (m1(p, p, intr, enc1(intr, n(p, intr,
+    r2), p)) m1(q, q, intr, enc1(intr, n(q, intr, r1), q)) m1(intr, p, q, enc1(
+    p, n(q, intr, r1), intr)) m1(intr, p, q, enc1(q, n(p, intr, r2), p)) m1(
+    intr, q, p, enc1(p, n(p, intr, r2), intr)) m1(intr, intr, p, enc1(p, n(p,
+    intr, r2), intr)) m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(intr,
+    intr, q, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(q, n(p,
+    intr, r2), intr))) nwM2: (m2(intr, p, q, enc2(q, n(q, intr, r1), n(p, intr,
+    r2))) m2(intr, q, p, enc2(p, n(q, intr, r1), n(p, intr, r2))) m2(intr,
+    intr, p, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(intr, intr, q, enc2(p,
+    n(q, intr, r1), n(p, intr, r2)))) nwM3: (m3(intr, p, q, enc3(p, n(q, intr,
+    r1))) m3(intr, p, q, enc3(q, n(p, intr, r2))) m3(intr, q, p, enc3(p, n(p,
+    intr, r2))) m3(intr, q, p, enc3(q, n(q, intr, r1))) m3(intr, intr, p, enc3(
+    p, n(q, intr, r1))) m3(intr, intr, q, enc3(p, n(p, intr, r2))) m3(intr,
+    intr, q, enc3(q, n(q, intr, r1)))) rands: emp urand: (r1 r2) nonces: (n(p,
+    intr, r2) n(q, intr, r1)) prins: (p q intr)} || ({newmsg: m1(intr, intr, q,
+    enc1(q, n(p, intr, r2), intr)) recmsg1: empt recmsg2: empt isFake: true
+    newCen1: enc1(q, n(p, intr, r2), intr) newCen2: empC2 newCen3: empC3 cenc1:
+    (enc1(p, n(p, intr, r2), intr) enc1(p, n(q, intr, r1), intr) enc1(q, n(p,
+    intr, r2), p) enc1(q, n(p, intr, r2), intr)) cenc2: (enc2(p, n(q, intr,
+    r1), n(p, intr, r2)) enc2(q, n(q, intr, r1), n(p, intr, r2))) cenc3: (enc3(
+    p, n(p, intr, r2)) enc3(p, n(q, intr, r1)) enc3(q, n(p, intr, r2)) enc3(q,
+    n(q, intr, r1))) nw: (m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m1(q,
+    q, intr, enc1(intr, n(q, intr, r1), q)) m1(intr, p, q, enc1(p, n(q, intr,
+    r1), intr)) m1(intr, p, q, enc1(q, n(p, intr, r2), p)) m1(intr, q, p, enc1(
+    p, n(p, intr, r2), intr)) m1(intr, intr, p, enc1(p, n(p, intr, r2), intr))
+    m1(intr, intr, p, enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(p,
+    n(q, intr, r1), intr)) m1(intr, intr, q, enc1(q, n(p, intr, r2), intr)) m2(
+    intr, p, q, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(intr, q, p, enc2(p,
+    n(q, intr, r1), n(p, intr, r2))) m2(intr, intr, p, enc2(q, n(q, intr, r1),
+    n(p, intr, r2))) m2(intr, intr, q, enc2(p, n(q, intr, r1), n(p, intr, r2)))
+    m3(intr, p, q, enc3(p, n(q, intr, r1))) m3(intr, p, q, enc3(q, n(p, intr,
+    r2))) m3(intr, q, p, enc3(p, n(p, intr, r2))) m3(intr, q, p, enc3(q, n(q,
+    intr, r1))) m3(intr, intr, p, enc3(p, n(q, intr, r1))) m3(intr, intr, q,
+    enc3(p, n(p, intr, r2))) m3(intr, intr, q, enc3(q, n(q, intr, r1)))) m1:
+    m1(intr, intr, q, enc1(q, n(p, intr, r2), intr)) m2: empM2 m3: empM3 nwM1:
+    (m1(p, p, intr, enc1(intr, n(p, intr, r2), p)) m1(q, q, intr, enc1(intr, n(
+    q, intr, r1), q)) m1(intr, p, q, enc1(p, n(q, intr, r1), intr)) m1(intr, p,
+    q, enc1(q, n(p, intr, r2), p)) m1(intr, q, p, enc1(p, n(p, intr, r2),
+    intr)) m1(intr, intr, p, enc1(p, n(p, intr, r2), intr)) m1(intr, intr, p,
+    enc1(p, n(q, intr, r1), intr)) m1(intr, intr, q, enc1(p, n(q, intr, r1),
+    intr)) m1(intr, intr, q, enc1(q, n(p, intr, r2), intr))) nwM2: (m2(intr, p,
+    q, enc2(q, n(q, intr, r1), n(p, intr, r2))) m2(intr, q, p, enc2(p, n(q,
+    intr, r1), n(p, intr, r2))) m2(intr, intr, p, enc2(q, n(q, intr, r1), n(p,
+    intr, r2))) m2(intr, intr, q, enc2(p, n(q, intr, r1), n(p, intr, r2))))
+    nwM3: (m3(intr, p, q, enc3(p, n(q, intr, r1))) m3(intr, p, q, enc3(q, n(p,
+    intr, r2))) m3(intr, q, p, enc3(p, n(p, intr, r2))) m3(intr, q, p, enc3(q,
+    n(q, intr, r1))) m3(intr, intr, p, enc3(p, n(q, intr, r1))) m3(intr, intr,
+    q, enc3(p, n(p, intr, r2))) m3(intr, intr, q, enc3(q, n(q, intr, r1))))
+    rands: emp urand: (r1 r2) nonces: (n(p, intr, r2) n(q, intr, r1)) prins: (p
+    q intr)} || nil))))))))))))))))))))))))
+Bye.

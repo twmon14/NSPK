@@ -1,0 +1,11 @@
+###keys
+newmsg recmsg1 recmsg2
+###textDisplay
+newmsg::::EXT
+newmsg#0 newmsg#1 newmsg#2 newmsg#3#0 newmsg#3#3 newmsg#3#1#0 newmsg#3#1#1 newmsg#3#1#2 newmsg#3#2#0 newmsg#3#2#1 newmsg#3#2#2
+###states
+(newmsg: m1(p, p, intrdr, enc1(intrdr, n(p, intrdr, r1), p)) recmsg1: empt recmsg2: empt) || 
+(newmsg: m1(intrdr, p, q, enc1(q, n(p, intrdr, r1), p)) recmsg1: empt recmsg2: empt) || 
+(newmsg: m2(q, q, p, enc2(p, n(p, intrdr, r1), n(q, p,r2))) recmsg1: m1(intrdr, p, q, enc1(q, n(p, intrdr, r1), p)) recmsg2: empt) || 
+(newmsg: m2(intrdr, intrdr, p, enc2(p, n(p, intrdr, r1), n(q, p, r2))) recmsg1: empt recmsg2: empt) || 
+(newmsg: m3(p, p, intrdr, enc3(intrdr, n(q, p, r2))) recmsg1: m2(intrdr, intrdr, p, enc2(p, n(p, intrdr, r1), n(q, p, r2))) recmsg2: empt)
